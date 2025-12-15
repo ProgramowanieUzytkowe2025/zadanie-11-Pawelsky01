@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.app.small { font-size: 13px; }
+.app.medium { font-size: 16px; }
+.app.large { font-size: 20px; }
+
+
+header {
+  background-color: #1e1e1e;
+  padding: 16px 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+header span {
+  margin-left: 10px;
+  color: #90caf9;
+  transition: color 0.2s;
+}
+
+header span:hover {
+  color: #64b5f6;
+}
+
+h3 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+div > label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+input {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #fff;
+  margin-top: 4px;
+}
+
+input:read-only {
+  background-color: #181818;
+  color: #bdbdbd;
+}
+
+input:focus {
+  outline: none;
+  border-color: #64b5f6;
+}
+
+button {
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  margin: 6px 6px 6px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: #1565c0;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  transform: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+li {
+  background-color: #1e1e1e;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #388e3c;
+}
+
+li button:hover {
+  background-color: #2e7d32;
+}
+
+#comp {
+  width: 20%;
+  min-width: 220px;
+  font-weight: 500;
 }

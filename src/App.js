@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import AppHeader from "./AppHeader";
+import AppCalculator from "./AppCalculator";
 
 function App() {
+  const [fontSize, setFontSize] = useState("medium");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${fontSize}`}>
+      <AppHeader onFontChange={setFontSize} />
+      <AppCalculator />
     </div>
   );
 }
+
+
 
 export default App;
